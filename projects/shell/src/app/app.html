@@ -1,0 +1,16 @@
+<header>
+  <h1>☕ Coffee Shop</h1>
+  <nav>
+    <a routerLink="/catalog" routerLinkActive="active">Menu</a>
+    <a routerLink="/cart" routerLinkActive="active">
+      Koszyk
+      @if (cart.count() > 0) {
+        <span class="badge">{{ cart.count() }}</span>
+      }
+    </a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>
